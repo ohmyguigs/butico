@@ -1,6 +1,37 @@
-[gd_scene load_steps=2 format=3 uid="uid://djgclusiao6qw"]
+[gd_scene load_steps=6 format=3 uid="uid://djgclusiao6qw"]
 
 [ext_resource type="Script" uid="uid://jcxl43uwdhmy" path="res://scenes/mundo_01/script.gd" id="1_e2oap"]
+[ext_resource type="Material" uid="uid://cego7217xjssk" path="res://assets/materials/floor_prototype_material.tres" id="2_y7r0g"]
+[ext_resource type="Texture2D" uid="uid://dgsoge8tjlm44" path="res://assets/prototype/Dark/texture_03.png" id="3_2odnv"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_2odnv"]
+material = ExtResource("2_y7r0g")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_g0bv1"]
+albedo_texture = ExtResource("3_2odnv")
 
 [node name="Mundo1" type="Node3D"]
 script = ExtResource("1_e2oap")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(3.95135, 0, 0, 0, 0.370747, 0, 0, 0, 10.2325, 0, 0, 0)
+mesh = SubResource("BoxMesh_2odnv")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(5.92263, -0.0540382, 0, 0.872571, 0.366788, 0, 0, 0, 10.2325, 4.51123, 0.390593, 0)
+mesh = SubResource("BoxMesh_2odnv")
+
+[node name="MeshInstance3D4" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.126238, -0.361162, 0, 2.74823, 0.0165898, 0, 0, 0, 10.2325, 7.74323, 1.27496, 0)
+mesh = SubResource("BoxMesh_2odnv")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(1.28423, 0.328292, 0, -5.20297, 0.0810312, 0, 0, 0, 10.2325, -2.52391, 1.9625, 0)
+material_override = SubResource("StandardMaterial3D_g0bv1")
+mesh = SubResource("BoxMesh_2odnv")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.87866, 3.27699, 10.6244)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(-0.0419946, -0.742127, 0.668942, 0.0267267, 0.668459, 0.743269, -0.99876, 0.0490918, -0.00823706, 26.6868, 13.2823, -0.122153)

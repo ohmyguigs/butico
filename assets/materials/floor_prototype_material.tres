@@ -1,9 +1,9 @@
-[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://djwgxm0207ddi"]
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cego7217xjssk"]
 
-[ext_resource type="Texture2D" uid="uid://t26tg8kua23w" path="res://assets/prototype/Green/texture_01.png" id="1_1a1e2"]
+[ext_resource type="Texture2D" uid="uid://btiqe65fubnm" path="res://assets/prototype/Dark/texture_01.png" id="1_a5ys4"]
 
 [resource]
-albedo_texture = ExtResource("1_1a1e2")
+albedo_texture = ExtResource("1_a5ys4")
 albedo_texture_force_srgb = true
 metallic = 0.5
 roughness = 0.69
